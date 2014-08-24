@@ -1,0 +1,20 @@
+---
+ip: "192.168.10.10"
+memory: 2048
+cpus: 1
+
+authorize: C:/Users/Nagarjuna/.ssh/id_rsa.pub
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: C:/Users/Nagarjuna/vagPro
+      to: /home/vagrant/Code  
+
+sites:
+    - map: homestead.app
+      to: /home/vagrant/Code/laravel/public/        
+
+variables:
+    - key: APP_ENV
+      value: local
